@@ -1,0 +1,121 @@
+<html>
+  <body>
+<h2>VlookUP<h2>
+    <br><br>
+    </a>
+    
+    <p>Baik, saya akan menjelaskan langkah-langkah serta rumus yang dibutuhkan sesuai soal di foto tersebut untuk membuat laporan keuangan mingguan di Microsoft Excel.
+
+1. Mengisi Nama Barang (Menggunakan Rumus VLOOKUP)
+
+Nama barang diambil dari tabel referensi berdasarkan Kode Barang.
+
+Rumus VLOOKUP:
+
+=VLOOKUP(A2, Tabel_Referensi, 2, FALSE)
+
+Penjelasan:
+
+A2: Kode Barang yang dimasukkan.
+
+Tabel_Referensi: Range tabel yang berisi kode barang dan nama barang.
+
+2: Kolom kedua dalam tabel referensi yang berisi nama barang.
+
+FALSE: Pencarian nilai yang cocok persis.
+
+
+
+
+---
+
+2. Mengisi Merek (Menggunakan Rumus VLOOKUP)
+
+Caranya sama dengan langkah pertama, hanya saja kolom yang dirujuk adalah kolom merek.
+
+Rumus:
+
+=VLOOKUP(A2, Tabel_Referensi, 3, FALSE)
+
+
+
+---
+
+3. Menentukan Harga Pokok Menggunakan Rumus Perkalian
+
+Harga pokok dihitung dengan rumus:
+
+=C2 * D2
+
+Penjelasan:
+
+C2: Jumlah Unit
+
+D2: Harga Pokok per unit
+
+
+
+
+---
+
+4. Menentukan Total Penjualan
+
+Total dihitung dengan rumus:
+
+=E2 * F2
+
+Penjelasan:
+
+E2: Harga Pokok
+
+F2: Jumlah Terjual
+
+
+
+
+---
+
+5. Menentukan Diskon dengan Ketentuan
+
+Diskon diberikan berdasarkan total penjualan:
+
+Jika Total > 1.000.000, diskon 25%
+
+Jika Total > 800.000, diskon 20%
+
+Jika Total > 500.000, diskon 15%
+
+Jika Total > 300.000, diskon 10%
+
+Jika Total <= 200.000, diskon 5%
+
+
+Rumus menggunakan fungsi IF bertingkat:
+
+=IF(G2>1000000, G2*25%, IF(G2>800000, G2*20%, IF(G2>500000, G2*15%, IF(G2>300000, G2*10%, G2*5%))))
+
+
+---
+
+6. Menentukan Kategori dengan Rumus IF
+
+Kategori "Mahal" jika total lebih dari 1.500.000, "Murah" jika kurang.
+
+Rumus:
+
+=IF(G2>1500000, "Mahal", "Murah")
+
+
+
+---
+
+7. Penyelesaian Tabel
+
+Setelah memasukkan semua rumus di setiap baris data, pastikan semua kolom terisi dengan benar sesuai instruksi. Jangan lupa untuk menyimpan file dengan nama sesuai format yang diminta.
+
+Jika ada pertanyaan terkait bagian tertentu atau rumus yang ingin didalami, beri tahu saya!
+
+</p>
+    <p>Belajar membuat halaman web dasar itu menyenangkan!</p>
+  </body>
+</html>
